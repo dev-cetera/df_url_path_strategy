@@ -19,7 +19,7 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart'
 
 /// Initializes the URL path strategy for the application.
 ///
-/// On web platforms, it sets the [web_plugins.PathUrlStrategy] to remove the
+/// On web platforms, it sets the [PathUrlStrategy] to remove the
 /// '#' from URLs. On non-web platforms, it performs a no-op.
 @pragma('vm:prefer-inline')
 void configureUrlPathStrategy() {
