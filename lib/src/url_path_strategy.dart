@@ -13,8 +13,8 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 import 'noop_url_strategy.dart'
-    if (dart.library.html) 'package:flutter_web_plugins/flutter_web_plugins.dart' as web_plugins
-    show setUrlStrategy, PathUrlStrategy;
+    if (dart.library.io) 'noop_url_strategy.dart'
+    if (dart.library.html) 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -26,7 +26,7 @@ import 'noop_url_strategy.dart'
 void configureUrlPathStrategy() {
   if (kIsWeb) {
     try {
-      web_plugins.setUrlStrategy(web_plugins.PathUrlStrategy());
+      setUrlStrategy(const PathUrlStrategy());
     } catch (_) {
       // Ignore errors during hot reloading since setUrlStrategy can only be set once.
     }
