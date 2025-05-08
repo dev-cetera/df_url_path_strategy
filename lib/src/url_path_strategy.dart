@@ -26,7 +26,7 @@ import 'noop_url_strategy.dart'
 void configureUrlPathStrategy() {
   if (kIsWeb) {
     try {
-      setUrlStrategy(const PathUrlStrategy());
+      setUrlStrategy(PathUrlStrategy());
     } catch (_) {
       // Ignore errors during hot reloading since setUrlStrategy can only be set once.
     }

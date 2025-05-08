@@ -17,6 +17,5 @@ void setUrlStrategy(dynamic strategy) {
 }
 
 class PathUrlStrategy {
-  const PathUrlStrategy();
   // No-op
 }
