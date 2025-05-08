@@ -12,10 +12,8 @@
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 
-import 'noop_url_strategy.dart'
-    if (dart.library.io) 'noop_url_strategy.dart'
-    if (dart.library.html) 'package:flutter_web_plugins/flutter_web_plugins.dart'
-    if (dart.library.wasm) 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart'
+    if (dart.library.io) 'noop_url_strategy.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
