@@ -14,5 +14,8 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  df_url_path_strategy: ^0.1.0
+  df_url_path_strategy:
+    git:
+      url: https://github.com/dev-cetera/df_url_path_strategy
+      ref: main
 ```
