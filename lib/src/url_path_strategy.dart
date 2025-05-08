@@ -23,7 +23,7 @@ import 'noop_url_strategy.dart'
 /// On web platforms, it sets the [web_plugins.PathUrlStrategy] to remove the
 /// '#' from URLs. On non-web platforms, it performs a no-op.
 @pragma('vm:prefer-inline')
-Future<void> configureUrlPathStrategy() async {
+void configureUrlPathStrategy() {
   if (kIsWeb) {
     try {
       web_plugins.setUrlStrategy(web_plugins.PathUrlStrategy());
